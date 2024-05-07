@@ -1,16 +1,12 @@
-
 import { NavBar } from "./components/NavBar"
 import { MainRoute } from "./routes/MainRoute"
 
 
 function App() {
-
-  
-
   return (
-     <div className="w-screen h-screen flex flex-row  overflow-hidden">
+     <div className="w-screen h-screen flex flex-1 flex-row overflow-hidden">
         <NavBar />
-        <MainRoute />  
+        <MainRoute />
      </div>
   )
 }
