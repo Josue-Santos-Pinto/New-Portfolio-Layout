@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import GuitarStore from '../assets/guitarstore-web.png'
+import { Skills } from "../data/skills";
+import { SkillList } from "../components/SkillsList";
 
 export function Home(){
+
+    const repeatedSkills = Skills.concat(Skills)
+
     return (
         <div className="flex flex-1 items-center justify-center w-full bg-secundary p-10">    
             <div className="w-full h-full grid grid-cols-4 gap-4">
@@ -45,14 +50,32 @@ export function Home(){
                             <img src={GuitarStore} className="h-full w-full object-contain" />
                         </div>
                 </div>
-                <div className="col-span-2 row-span-2 flex   items-center flex-col border border-zinc-500 rounded-md bg-primary px-4">
+                <div className="col-span-2 row-span-2 flex overflow-hidden items-center flex-col border border-zinc-500 rounded-md bg-primary px-4">
                         
                         <div className="text-center my-4">
                             <h2 className="text-4xl font-bold">Skills</h2>
                         </div>
-                        <div className="w-2/4 h-48 p-2 mt-10 overflow-hidden border rounded-md">
-                            <img src={GuitarStore} className="h-full w-full object-contain" />
-                        </div>
+                            <ul className=" w-full flex flex-row my-4">
+                                    {repeatedSkills.map((item, index)=>(
+                                        
+                                            <li className="animate-[scrollToLeft_40s_linear_infinite]"><SkillList key={index} data={item}/></li>
+                                    
+                                    ))}
+                            </ul>
+                            <ul className=" w-full flex flex-row my-4">
+                                    {repeatedSkills.map((item, index)=>(
+                                        
+                                            <li className="animate-[scrollToRight_40s_linear_infinite]"><SkillList key={index} data={item}/></li>
+                                    
+                                    ))}
+                            </ul>
+                            <ul className=" w-full flex flex-row my-4">
+                                    {repeatedSkills.map((item, index)=>(
+                                        
+                                            <li className="animate-[scrollToLeft_40s_linear_infinite]"><SkillList key={index} data={item}/></li>
+                                    
+                                    ))}
+                            </ul>
                 </div>
             </div>
         </div>
