@@ -15,17 +15,19 @@ export default {
       keyframes: {
         scrollToLeft: {
           '0%': {transform: 'translateX(0)'},
-          '100%': {transform: 'translateX(calc(-48px * 8))'}
+          '100%': {transform: 'translateX(calc(-48px * 10))'}
         },
         scrollToRight: {
-          '0%': {transform: 'translateX(calc(48px * 16)'},
-          '100%': {transform: 'translateX(0))'}
+          '0%': {transform: 'translateX(calc(-48px * 12))'},
+          '100%': {transform: 'translateX(0)'}
         },
       },
       
     },
    
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
 
