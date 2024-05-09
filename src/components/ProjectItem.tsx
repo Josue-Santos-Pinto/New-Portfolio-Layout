@@ -9,7 +9,7 @@ type Props = {
 
 export function ProjectItem({data}: Props){
     return (
-        <div className="w-11/12 my-4 border rounded-md overflow-hidden ">
+        <div className="w-11/12 my-4 mx-auto border rounded-md overflow-hidden ">
             <div className="w-full h-2/3 flex items-center justify-center">
                 <img src={data.img} className="w-full h-full object-cover"/>
             </div>

@@ -7,7 +7,7 @@ export function Home(){
     let repeatedSkills = Skills.concat(Skills)
 
     return (
-        <div className="flex flex-1 items-center justify-center w-full bg-secundary p-10 bg-[url('./assets/lamp.jpg')]"> 
+        <div className="flex flex-1 items-center justify-center w-full bg-secundary p-10 bg-[url('./assets/light.jpg')]"> 
             <div className="w-full h-full grid grid-cols-4 gap-4 ">
                 <div className="flex items-center justify-center flex-col border border-zinc-500 rounded-md bg-primary">
                     <h2 className="text-6xl font-bold mb-2">20+</h2>
